@@ -17,7 +17,7 @@ module Gridzilla
               break
             end
           rescue Exception => e
-            if RAILS_ENV == 'development'
+            if Rails.env.development?
               raise e
             else
               next
